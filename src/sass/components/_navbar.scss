@@ -1,0 +1,35 @@
+@use "../abstract" as *;
+
+.navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 3rem 4rem;
+	margin-bottom: 8rem;
+	background-color: $color-blue-3;
+
+	&__logo-box {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		margin-right: 1.5rem;
+		color: $color-black;
+		font-size: 4rem;
+	}
+
+	&__name {
+		color: $color-black;
+		font-size: 3.3rem;
+		font-family: "Oswald", sans-serif;
+
+		&-span {
+			color: $color-white;
+		}
+	}
+
+	&__link:not(:last-child) {
+		margin-right: 3rem;
+	}
+}

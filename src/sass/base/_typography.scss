@@ -1,0 +1,19 @@
+@use "../abstract" as *;
+
+// Logo Font
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+// Body Font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+html {
+	font-size: 10px;
+
+	@include respond(phone) {
+		font-size: 6px;
+	}
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
