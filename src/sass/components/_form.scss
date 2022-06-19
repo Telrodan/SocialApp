@@ -1,0 +1,67 @@
+@use "../abstract" as *;
+
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: 3rem 4rem;
+	width: 22%;
+	box-shadow: 0 7px 8px rgba($color-black, 0.4);
+
+	&__group {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__input {
+		padding: 1rem 2rem;
+		color: $color-black;
+		background-color: rgba($color-white, 0.5);
+		border: 1px solid transparent;
+		box-shadow: 0 5px 5px rgba($color-black, 0.2);
+		font-size: 1.8rem;
+		transition: all 0.3s;
+
+		&::placeholder {
+			color: $color-black;
+		}
+
+		&:hover {
+			background-color: rgba($color-white, 0.7);
+			box-shadow: 0 7px 8px rgba($color-black, 0.2);
+			transform: scale(1.01);
+		}
+
+		&:focus {
+			background-color: $color-white;
+			box-shadow: 0 5px 5px rgba($color-black, 0.4);
+			border: 1px solid rgba($color-black, 0.4);
+			outline: none;
+			transform: scale(1);
+		}
+	}
+
+	&__label {
+		margin-top: 0.5rem;
+		margin-left: 2rem;
+		color: $color-white;
+		font-size: 1.8rem;
+		transition: all 0.3s;
+	}
+
+	&__input:placeholder-shown + &__label {
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-4rem);
+	}
+
+	&__link {
+		color: $color-white;
+		font-size: 1.6rem;
+		text-align: center;
+		transition: all 0.2s;
+
+		&:hover {
+			color: rgba($color-white, 0.8);
+		}
+	}
+}
