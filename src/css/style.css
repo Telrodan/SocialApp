@@ -105,6 +105,12 @@ body {
   padding: 3rem 4rem;
   width: 22%;
   box-shadow: 0 7px 8px rgba(32, 32, 32, 0.4);
+  color: #202020;
+}
+@media only screen and (max-width: 37.5em) {
+  .form {
+    width: 90%;
+  }
 }
 .form__group {
   display: flex;
@@ -112,7 +118,6 @@ body {
 }
 .form__input {
   padding: 1rem 2rem;
-  color: #202020;
   background-color: rgba(242, 242, 242, 0.5);
   border: 1px solid transparent;
   box-shadow: 0 5px 5px rgba(32, 32, 32, 0.2);
@@ -371,12 +376,40 @@ body {
 .login-page__form__paragraph {
   font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 .login-page__form__group {
   margin-bottom: 1rem;
 }
 .login-page__form__button {
+  margin-bottom: 2rem;
+}
+
+.register-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.register-page__form {
+  background-color: #6b7ff2;
+}
+.register-page__form__heading {
+  margin-bottom: 1rem;
+  color: #f2f2f2;
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.register-page__form__paragraph {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+.register-page__form__group {
+  margin-bottom: 1rem;
+}
+.register-page__form__button {
   margin-bottom: 2rem;
 }
 
