@@ -34,7 +34,7 @@ const succesfullLogin = () => {
 	setFormMessage("valid", "Succesfull login.");
 	validInput(usernameInput);
 	validInput(passwordInput);
-	navigateUser("/src/pages/home.html", 1500);
+	navigateUser("../src/pages/home.html", 1500);
 };
 
 const invalidLogin = () => {
