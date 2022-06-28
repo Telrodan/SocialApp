@@ -1,0 +1,25 @@
+@use "../abstract" as *;
+
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	padding: 4rem 5rem;
+
+	&__link {
+		color: $color-grey;
+		font-size: 1.8rem;
+		transition: all 0.2s;
+
+		&:hover {
+			color: $color-blue-3;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 5rem;
+		}
+	}
+
+	&__icon {
+		margin-right: 1rem;
+	}
+}

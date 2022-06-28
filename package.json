@@ -4,12 +4,14 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"server": "json-server --watch src/database/database.json --port 3004",
 		"compile:sass": "sass src/sass/main.scss src/css/style.css -w"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
+		"json-server": "^0.17.0",
 		"sass": "^1.52.3"
 	}
 }

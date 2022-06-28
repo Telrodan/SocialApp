@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Import UUID -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js" defer></script>
+  <!-- Import Login JS -->
+  <script type="module" src="/src/js/pages/login.js" defer></script>
   <!-- Link CSS -->
   <link rel="stylesheet" href="../css/style.css">
   <title>SocialApp | Login</title>
@@ -12,26 +16,25 @@
 
 <body>
   <div class="app">
-    <div class="app__content">
-      <div class="login-page">
-        <form action="#" class="login-page__form form">
-          <h1 class="login-page__form__heading">Welcome back!</h1>
-          <p class="login-page__form__paragraph">Login</p>
-          <div class="login-page__form__group form__group">
-            <input type="text" id="username" class="login-page__form__input form__input"
-              placeholder="Enter your username">
-            <label for="username" class="login-page__form__label form__label">Username</label>
-          </div>
-          <div class="login-page__form__group form__group">
-            <input type="password" id="password" class="login-page__form__input form__input"
-              placeholder="Enter your password">
-            <label for="password" class="login-page__form__label form__label">Password</label>
-          </div>
-          <button class="login-page__form__button button button--white">Login</button>
-          <a href="../pages/register.html" class="login-page__form__link form__link">Don't have an account?
-            Register!</a>
-        </form>
-      </div>
+    <div class="login-page">
+      <form action="#" class="login-page__form form" id="loginForm">
+        <h1 class="login-page__form__heading">Welcome back!</h1>
+        <p class="login-page__form__paragraph">Login</p>
+        <p class="form__message" id="formMessage">test</p>
+        <div class="login-page__form__group form__group">
+          <input type="text" id="username" class="login-page__form__input form__input"
+            placeholder="Enter your username">
+          <label for="username" class="login-page__form__label form__label">Username</label>
+        </div>
+        <div class="login-page__form__group form__group">
+          <input type="password" id="password" class="login-page__form__input form__input"
+            placeholder="Enter your password">
+          <label for="password" class="login-page__form__label form__label">Password</label>
+        </div>
+        <button class="login-page__form__button button button--white">Login</button>
+        <a href="../pages/register.html" class="login-page__form__link form__link">Don't have an account?
+          Register!</a>
+      </form>
     </div>
   </div>
 </body>

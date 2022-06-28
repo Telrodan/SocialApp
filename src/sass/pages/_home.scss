@@ -1,0 +1,26 @@
+@use "../abstract" as *;
+
+.home-page {
+	display: flex;
+
+	&__welcome {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&__image {
+			width: 25%;
+			margin-bottom: 1.5rem;
+		}
+
+		&__heading {
+			color: $color-grey;
+			font-size: 2rem;
+			font-weight: 500;
+		}
+	}
+
+	&__create-post {
+		margin: 3rem 0;
+	}
+}

@@ -12,6 +12,23 @@
 		width: 90%;
 	}
 
+	&__message {
+		display: none;
+		text-align: center;
+		font-size: 1.8rem;
+		margin-bottom: 2rem;
+
+		&--valid {
+			display: block;
+			color: $color-green;
+		}
+
+		&--invalid {
+			display: block;
+			color: $color-red;
+		}
+	}
+
 	&__group {
 		display: flex;
 		flex-direction: column;
@@ -24,6 +41,15 @@
 		box-shadow: 0 5px 5px rgba($color-black, 0.2);
 		font-size: 1.8rem;
 		transition: all 0.3s;
+
+		&--valid {
+			border: 1px solid $color-green;
+		}
+
+		&--invalid {
+			border: 1px solid $color-red;
+			background-color: rgba($color-red, 0.15);
+		}
 
 		&::placeholder {
 			color: $color-black;
