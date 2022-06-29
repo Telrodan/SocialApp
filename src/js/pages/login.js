@@ -1,7 +1,9 @@
 "use strict";
 
-import navigateUser from "../utils/navigateUser.js";
 import { getUserDatabase } from "../API/user.js";
+import verifyUser from "../utils/user/verifyUser.js";
+import navigateUser from "../utils/user/navigateUser.js";
+import setFormMessage from "../utils/form/setFormMessage.js";
 import {
 	validateUserInput,
 	validInput,
@@ -10,57 +12,41 @@ import {
 } from "../validators/formValidators.js";
 
 const loginForm = document.getElementById("loginForm");
-const formMessage = document.getElementById("formMessage");
-const usernameInput = document.getElementById("username");
-const passwordInput = document.getElementById("password");
+const usernameInputEl = document.getElementById("username");
+const passwordInputEl = document.getElementById("password");
 
-const setFormMessage = (selector, message) => {
-	if (selector === "valid") {
-		formMessage.classList.add("form__message--valid");
-		formMessage.classList.remove("form__message--invalid");
-		formMessage.innerText = message;
-	} else if (selector === "invalid") {
-		formMessage.classList.add("form__message--invalid");
-		formMessage.classList.remove("form__message--valid");
-		formMessage.innerText = message;
-	} else if (selector === "default") {
-		formMessage.classList.remove("form__message--valid", "form__message--invalid");
-	} else {
-		console.log("Error. Selector not valid.");
-	}
-};
-
-const succesfullLogin = () => {
+const validLogin = () => {
+	verifyUser(user);
+	navigateUser("/src/pages/home.html", 1500);
 	setFormMessage("valid", "Succesfull login.");
-	validInput(usernameInput);
-	validInput(passwordInput);
-	navigateUser("../src/pages/home.html", 1500);
+	validInput(usernameInputEl);
+	validInput(passwordInputEl);
 };
 
 const invalidLogin = () => {
 	setFormMessage("invalid", "Invalid login details.");
-	invalidInput(usernameInput);
-	invalidInput(passwordInput);
+	invalidInput(usernameInputEl);
+	invalidInput(passwordInputEl);
 };
 
 const defaultLogin = () => {
-	setFormMessage("default", "");
-	defaultInput(usernameInput);
-	defaultInput(passwordInput);
+	setFormMessage("default");
+	defaultInput(usernameInputEl);
+	defaultInput(passwordInputEl);
 };
 
 const validateLogin = async (e) => {
 	e.preventDefault();
 
 	const userDatabase = await getUserDatabase();
-	const enteredUsername = usernameInput.value;
-	const enteredPassword = passwordInput.value;
+	const enteredUsername = usernameInputEl.value;
+	const enteredPassword = passwordInputEl.value;
 	const user = userDatabase.find(
 		(user) => enteredUsername === user.username && enteredPassword === user.password
 	);
 
 	if (user) {
-		succesfullLogin();
+		validLogin();
 	} else {
 		invalidLogin();
 		setTimeout(() => {
@@ -69,6 +55,10 @@ const validateLogin = async (e) => {
 	}
 };
 
-loginForm.addEventListener("submit", validateLogin);
-usernameInput.addEventListener("blur", validateUserInput);
-passwordInput.addEventListener("blur", validateUserInput);
+const registerEventListeners = () => {
+	loginForm.addEventListener("submit", validateLogin);
+	usernameInputEl.addEventListener("blur", validateUserInput);
+	passwordInputEl.addEventListener("blur", validateUserInput);
+};
+
+registerEventListeners();

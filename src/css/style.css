@@ -132,7 +132,7 @@ body {
 }
 .form__message--invalid {
   display: block;
-  color: #f22e2e;
+  color: #bd0808;
 }
 .form__group {
   display: flex;
@@ -150,8 +150,8 @@ body {
   border: 1px solid #00e20b;
 }
 .form__input--invalid {
-  border: 1px solid #f22e2e;
-  background-color: rgba(242, 46, 46, 0.15);
+  border: 1px solid #bd0808;
+  background-color: rgba(189, 8, 8, 0.15);
 }
 .form__input::placeholder {
   color: #202020;
