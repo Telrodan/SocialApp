@@ -1,38 +1,34 @@
 "use strict";
 
-import { getUserDatabase } from "../API/user.js";
+import getUserDatabase from "../API/user/getUserDatabase.js";
 import verifyUser from "../utils/user/verifyUser.js";
 import navigateUser from "../utils/user/navigateUser.js";
 import setFormMessage from "../utils/form/setFormMessage.js";
-import {
-	validateUserInput,
-	validInput,
-	invalidInput,
-	defaultInput,
-} from "../validators/formValidators.js";
+import handleFormInput from "../utils/form/handleFormInput.js";
+import validateUserInput from "../validators/form/validateUserInput.js";
 
 const loginForm = document.getElementById("loginForm");
 const usernameInputEl = document.getElementById("username");
 const passwordInputEl = document.getElementById("password");
 
-const validLogin = () => {
+const validLogin = (user) => {
 	verifyUser(user);
 	navigateUser("/src/pages/home.html", 1500);
 	setFormMessage("valid", "Succesfull login.");
-	validInput(usernameInputEl);
-	validInput(passwordInputEl);
+	handleFormInput("valid", usernameInputEl);
+	handleFormInput("valid", passwordInputEl);
 };
 
 const invalidLogin = () => {
 	setFormMessage("invalid", "Invalid login details.");
-	invalidInput(usernameInputEl);
-	invalidInput(passwordInputEl);
+	handleFormInput("invalid", usernameInputEl);
+	handleFormInput("invalid", passwordInputEl);
 };
 
 const defaultLogin = () => {
 	setFormMessage("default");
-	defaultInput(usernameInputEl);
-	defaultInput(passwordInputEl);
+	handleFormInput("default", usernameInputEl);
+	handleFormInput("default", passwordInputEl);
 };
 
 const validateLogin = async (e) => {
@@ -46,7 +42,7 @@ const validateLogin = async (e) => {
 	);
 
 	if (user) {
-		validLogin();
+		validLogin(user);
 	} else {
 		invalidLogin();
 		setTimeout(() => {

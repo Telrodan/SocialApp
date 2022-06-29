@@ -1,56 +1,39 @@
 "use strict";
 
-import setFormMessage from "../utils/form/setFormMessage.js";
+import validateEnteredUsername from "../regex/validateEnteredUsername.js";
+import validateEnteredPassword from "../regex/validateEnteredPassword.js";
+import validateEnteredEmail from "../regex/validateEnteredEmail.js";
+import validateEnteredPhoneNumber from "../regex/validateEnteredPhoneNumber.js";
+import setFormMessage from "../../utils/form/setFormMessage.js";
+import handleFormInput from "../../utils/form/handleFormInput.js";
 
-//REGEX
-const validateEnteredUsername = (username) => /^[a-zA-Z0-9]{5,}$/.test(username);
-const validateEnteredPassword = (password) =>
-	/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password);
-const validateEnteredEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-const validateEnteredPhoneNumber = (phoneNumber) => /^(\+\d{2}\s)?\d{7}$/.test(phoneNumber);
-
-//FORM INPUT VALIDATORS
-export const validInput = (self) => {
-	self.classList.add("form__input--valid");
-	self.classList.remove("form__input--invalid");
-};
-
-export const invalidInput = (self) => {
-	self.classList.add("form__input--invalid");
-	self.classList.remove("form__input--valid");
-};
-
-export const defaultInput = (self) => {
-	self.classList.remove("form__input--invalid", "form__input--valid");
-};
-
-export function validateUserInput(e) {
+function validateUserInput(e) {
 	const self = this;
 	const inputName = self.id;
 
 	if (self.value.trim() === "") {
-		defaultInput(self);
 		setFormMessage("default");
+		handleFormInput("default", self);
 		return;
 	}
 
 	if (inputName === "username") {
 		if (validateEnteredUsername(self.value)) {
 			setFormMessage("default");
-			validInput(self);
+			handleFormInput("valid", self);
 		} else {
-			invalidInput(self);
+			handleFormInput("invalid", self);
 			if (window.location.pathname === "/src/pages/register.html") {
 				setFormMessage("invalid", "Username must be at least 5 characters.");
-				invalidInput(self);
+				handleFormInput("invalid", self);
 			}
 		}
 	} else if (inputName === "password") {
 		if (validateEnteredPassword(self.value)) {
 			setFormMessage("default");
-			validInput(self);
+			handleFormInput("valid", self);
 		} else {
-			invalidInput(self);
+			handleFormInput("invalid", self);
 			if (window.location.pathname === "/src/pages/register.html") {
 				setFormMessage(
 					"invalid",
@@ -61,28 +44,30 @@ export function validateUserInput(e) {
 	} else if (inputName === "email") {
 		if (validateEnteredEmail(self.value)) {
 			setFormMessage("default");
-			validInput(self);
+			handleFormInput("valid", self);
 		} else {
 			setFormMessage("invalid", "Not valid e-mail address.");
-			invalidInput(self);
+			handleFormInput("invalid", self);
 		}
 	} else if (inputName === "phoneNumber") {
 		if (validateEnteredPhoneNumber(self.value)) {
 			setFormMessage("default");
-			validInput(self);
+			handleFormInput("valid", self);
 		} else {
 			setFormMessage("invalid", "Correct format: +XX XXXXXXX");
-			invalidInput(self);
+			handleFormInput("invalid", self);
 		}
 	} else if (inputName === "confirmPassword") {
 		const enteredPassword = document.getElementById("password").value;
 
 		if (enteredPassword === self.value) {
 			setFormMessage("default");
-			validInput(self);
+			handleFormInput("valid", self);
 		} else {
 			setFormMessage("invalid", "Password doesn't match.");
-			invalidInput(self);
+			handleFormInput("invalid", self);
 		}
 	}
 }
+
+export default validateUserInput;

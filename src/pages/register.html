@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Import UUID -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js" defer></script>
   <!-- Import Login JS -->
   <script type="module" src="/src/js/pages/register.js" defer></script>
   <!-- Link CSS -->
@@ -15,7 +17,7 @@
 <body>
   <div class="app">
     <div class="register-page">
-      <form action="#" class="register-page__form form">
+      <form action="#" class="register-page__form form" id="registerForm">
         <h1 class="register-page__form__heading">Register to</h1>
         <p class="register-page__form__paragraph">SocialApp</p>
         <p class="form__message" id="formMessage">test</p>
