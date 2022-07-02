@@ -19,8 +19,6 @@ welcomeUser();
 renderHomePosts();
 registerEventListeners();
 
-window.addEventListener("load", () => {});
-
 function registerEventListeners() {
 	document.addEventListener("click", handleFeedback);
 }

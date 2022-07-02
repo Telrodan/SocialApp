@@ -1,0 +1,30 @@
+@use "../abstract" as *;
+
+.post-details {
+	display: flex;
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+		padding: 3rem 4rem;
+		background-color: $color-blue-3;
+
+		&__title {
+			margin-bottom: 2rem;
+			color: $color-black;
+			font-size: 4rem;
+			font-weight: 500;
+		}
+
+		&__body {
+			margin-bottom: 2rem;
+			font-size: 2.4rem;
+			color: $color-grey;
+		}
+
+		&__button:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+}

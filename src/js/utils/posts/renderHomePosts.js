@@ -3,18 +3,15 @@
 import getHomePosts from "../../API/posts/getHomePosts.js";
 
 const renderHomePosts = async () => {
-	console.log("render posts");
 	const posts = await getHomePosts();
-	console.log("after getposts");
 	const homePostsContainer = document.getElementById("homePostsContainer");
 	let template = "";
 	posts.forEach((post) => {
-		console.log("rendering posts");
 		template += `
               <div class="home-post" id="${post.id}">
 							  <h2 class="home-post__title">${post.title}</h2>
 							  <p class="home-post__preview-body">${post.body.slice(0, 200)}</p>
-                <a href="/pages/apps/posts/details.html?id=${
+                <a href="/src/pages/home/post-details.html?id=${
 									post.id
 								}" class="home-post__read-more">Read more<i
 									  class="fa-solid fa-arrow-right fa-fw"></i></a>

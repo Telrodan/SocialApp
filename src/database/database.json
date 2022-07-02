@@ -4,32 +4,31 @@
       "id": "5767e09b-6938-41ec-950b-32aa589ad372",
       "username": "Telrodan",
       "password": "test"
+    },
+    {
+      "id": "d2846033-4265-4a19-bc1e-1e39a3cb8223",
+      "username": "NewsFeed",
+      "email": "news@feed.com",
+      "phone_number": "+44 4444444",
+      "password": "1234567a"
     }
   ],
   "posts": [
-    {
-      "id": "79acecbb-a995-4b97-8203-59d6b64fe2b3",
-      "title": "Elso post",
-      "body": "test szoveg",
-      "user": "Telrodan",
-      "likes": 0,
-      "date_posted": "2:46:50 PM, Fri Jul 01 2022"
-    },
-    {
-      "id": "b83af5ad-df21-47ea-b73b-b47cf83dbafe",
-      "title": "asd",
-      "body": "asd",
-      "user": "Telrodan",
-      "likes": 1,
-      "date_posted": "10:45:01 AM, Sat Jul 02 2022"
-    },
     {
       "id": "810dacdb-7bf5-4e88-b080-fb332a0301a2",
       "title": "Bence",
       "body": "ASKJDKLASJDLKSAJDLKASJDKLASJDKLjasDas",
       "user": "Telrodan",
-      "likes": 0,
+      "likes": 1,
       "date_posted": "11:35:40 AM, Sat Jul 02 2022"
+    },
+    {
+      "id": "467df6b2-f24c-4b43-86de-0fd9f5a34f74",
+      "title": "U.S. WOMEN’S WATER POLO IS TWO WINS SHY OF ANOTHER WORLD TITLE",
+      "body": "The U.S. women’s water polo team came into the FINA World Championships in Budapest, Hungary, with sky-high expectations. \n\nThe Americans are the three-time defending world champs, and they’re coming off an Olympic title from the Olympic Games Tokyo 2020, which was also their third consecutive gold.\n\nThose high expectations have yet to derail this seemingly unstoppable force, as the U.S. remains the only team in the tournament with a perfect record heading into Thursday’s semifinal matchup against Italy.  \n\nThe Americans had little trouble winning Group B, outscoring their opponents 58-12 in the three group games. In between blowouts of South Africa and Argentina, the U.S. battled with the Netherlands in an 11-7 win. There’s a chance the Americans could end up in a rematch with the second-place team out of Group B, as the Netherlands takes on host nation Hungary in the other semifinal. \n\nAs one of the four group winners, the U.S. advanced directly into the quarterfinals. That’s where it met Spain, which is much earlier than these two teams are used to seeing each other in major tournaments. The U.S. has faced Spain in the final of the past two world championships as well as in the gold-medal game in Tokyo last summer. \n",
+      "user": "NewsFeed",
+      "likes": 4,
+      "date_posted": "3:59:55 PM, Sat Jul 02 2022"
     }
   ]
 }
