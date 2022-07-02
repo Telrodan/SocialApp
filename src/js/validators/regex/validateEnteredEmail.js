@@ -1,5 +1,5 @@
-"use strict";
+'use strict';
 
-const validateEnteredEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+const validateEnteredEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 export default validateEnteredEmail;

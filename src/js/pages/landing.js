@@ -1,5 +1,9 @@
-"use strict";
+'use strict';
 
-import navbar from "../components/navbar.js";
+import navbar from '../components/navbar.js';
 
-navbar();
+const initPage = () => {
+  navbar();
+};
+
+initPage();

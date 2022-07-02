@@ -1,9 +1,15 @@
-import renderDetails from "../../utils/posts/renderDetails.js";
-import navbar from "../../components/navbar.js";
-import sidebar from "../../components/sidebar.js";
+'use strict';
 
-const id = new URLSearchParams(window.location.search).get("id");
+import renderDetails from '../../utils/posts/renderDetails.js';
+import navbar from '../../components/navbar.js';
+import sidebar from '../../components/sidebar.js';
 
-navbar();
-sidebar();
-renderDetails(id);
+const id = new URLSearchParams(window.location.search).get('id');
+
+const initPage = () => {
+  navbar();
+  sidebar();
+  renderDetails(id);
+};
+
+initPage();

@@ -1,19 +1,19 @@
-"use strict";
+'use strict';
 
-import getHomePosts from "../../API/posts/getHomePosts.js";
+import getHomePosts from '../../API/posts/getHomePosts.js';
 
 const renderHomePosts = async () => {
-	const posts = await getHomePosts();
-	const homePostsContainer = document.getElementById("homePostsContainer");
-	let template = "";
-	posts.forEach((post) => {
-		template += `
+  const posts = await getHomePosts();
+  const homePostsContainer = document.getElementById('homePostsContainer');
+  let template = '';
+  posts.forEach(post => {
+    template += `
               <div class="home-post" id="${post.id}">
 							  <h2 class="home-post__title">${post.title}</h2>
 							  <p class="home-post__preview-body">${post.body.slice(0, 200)}</p>
                 <a href="/src/pages/home/post-details.html?id=${
-									post.id
-								}" class="home-post__read-more">Read more<i
+                  post.id
+                }" class="home-post__read-more">Read more<i
 									  class="fa-solid fa-arrow-right fa-fw"></i></a>
 								<p class="home-post__likes">${post.likes} likes</p>
 							  <div class="home-post__details">
@@ -26,8 +26,8 @@ const renderHomePosts = async () => {
 							  </div>
               </div>
     `;
-		homePostsContainer.innerHTML = template;
-	});
+    homePostsContainer.innerHTML = template;
+  });
 };
 
 export default renderHomePosts;

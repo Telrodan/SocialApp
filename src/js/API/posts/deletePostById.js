@@ -1,11 +1,13 @@
-import navigateUser from "../../utils/user/navigateUser.js";
+'use strict';
 
-const deletePostById = async (id) => {
-	const res = await fetch("http://localhost:3004/posts/" + id, {
-		method: "DELETE",
-	});
+import navigateUser from '../../utils/user/navigateUser.js';
 
-	navigateUser("/src/pages/home/home.html");
+const deletePostById = async id => {
+  const res = await fetch('http://localhost:3004/posts/' + id, {
+    method: 'DELETE',
+  });
+
+  navigateUser('/src/pages/home/home.html');
 };
 
 export default deletePostById;

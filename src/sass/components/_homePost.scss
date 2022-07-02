@@ -1,76 +1,73 @@
-@use "../abstract" as *;
+@use '../abstract' as *;
 
 .home-post {
-	padding: 3rem 3.5rem;
-	width: 60%;
-	box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
-	background-color: $color-blue-4;
+  width: 60%;
+  padding: 3rem 3.5rem;
+  margin-bottom: 7rem;
+  box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
+  background-color: $color-blue-4;
 
-	&:not(:last-child) {
-		margin-bottom: 7rem;
-	}
+  &__title {
+    margin-bottom: 1rem;
+    color: $color-black;
+    font-size: 2rem;
+    font-weight: 500;
+  }
 
-	&__title {
-		margin-bottom: 1rem;
-		color: $color-black;
-		font-size: 2rem;
-		font-weight: 500;
-	}
+  &__preview-body {
+    margin-bottom: 2rem;
+    color: $color-black;
+    font-size: 1.8rem;
+  }
 
-	&__preview-body {
-		margin-bottom: 2rem;
-		color: $color-black;
-		font-size: 1.8rem;
-	}
+  &__read-more {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: $color-blue-2;
+    font-size: 1.6rem;
+    transition: all 0.2s;
 
-	&__read-more {
-		display: inline-block;
-		margin-bottom: 1.5rem;
-		color: $color-blue-2;
-		font-size: 1.6rem;
-		transition: all 0.2s;
+    &:hover {
+      color: $color-blue-1;
+    }
+  }
 
-		&:hover {
-			color: $color-blue-1;
-		}
-	}
+  &__likes {
+    color: $color-blue-1;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
 
-	&__likes {
-		color: $color-blue-1;
-		font-size: 1.6rem;
-		margin-bottom: 2rem;
-	}
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
 
-	&__details {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 2rem;
+    &__username {
+      color: $color-grey;
+      font-weight: 500;
+      font-size: 1.6rem;
+    }
 
-		&__username {
-			color: $color-grey;
-			font-weight: 500;
-			font-size: 1.6rem;
-		}
+    &__time {
+      font-size: 1.6rem;
+    }
+  }
 
-		&__time {
-			font-size: 1.6rem;
-		}
-	}
+  &__feedback {
+    display: flex;
+    justify-content: center;
 
-	&__feedback {
-		display: flex;
-		justify-content: center;
+    &--like {
+      margin-right: 5rem;
+      color: $color-green;
+      cursor: pointer;
+    }
 
-		&--like {
-			margin-right: 5rem;
-			color: $color-green;
-			cursor: pointer;
-		}
-
-		&--dislike {
-			color: $color-red;
-			cursor: pointer;
-		}
-	}
+    &--dislike {
+      color: $color-red;
+      cursor: pointer;
+    }
+  }
 }

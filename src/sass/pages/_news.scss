@@ -1,0 +1,56 @@
+@use '../abstract' as *;
+
+.news {
+  display: flex;
+
+  &__heading {
+    margin-bottom: 3rem;
+    color: $color-blue-3;
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 6rem;
+    margin-bottom: 5rem;
+    width: 60%;
+    background-color: $color-blue-4;
+    box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
+
+    &__title {
+      margin-bottom: 2rem;
+      color: $color-black;
+      font-size: 2.4rem;
+    }
+
+    &__image {
+      width: 50%;
+      align-self: center;
+      margin-bottom: 2rem;
+    }
+
+    &__description {
+      margin-bottom: 3rem;
+      color: $color-grey;
+      font-size: 1.8rem;
+    }
+
+    &__link {
+      color: $color-blue-3;
+      font-size: 1.6rem;
+      transition: all 0.2s;
+
+      &:hover {
+        color: $color-blue-1;
+      }
+    }
+  }
+}
