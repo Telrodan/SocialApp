@@ -63,7 +63,7 @@ body {
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
-  padding-top: 8rem;
+  padding-top: 3rem;
 }
 
 .button, .button:link, .button:visited {
@@ -74,6 +74,7 @@ body {
   font-size: 1.8rem;
   font-weight: 500;
   text-transform: uppercase;
+  text-align: center;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -87,6 +88,11 @@ body {
   background-color: #6b7ff2;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #2745f2 50%);
 }
+.button--red {
+  color: #f2f2f2;
+  background-color: rgba(189, 8, 8, 0.7);
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #bd0808 50%);
+}
 .button:hover {
   box-shadow: 0 7px 7px rgba(32, 32, 32, 0.7);
   transform: translateY(-3px);
@@ -95,6 +101,32 @@ body {
 .button:active {
   box-shadow: 0 5px 5px rgba(32, 32, 32, 0.85);
   transform: translateY(0);
+}
+
+.create-post {
+  display: flex;
+  width: 100%;
+}
+.create-post__heading {
+  margin-bottom: 3rem;
+  color: #6b7ff2;
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+.create-post__form {
+  width: 50%;
+  background-color: #6b7ff2;
+}
+.create-post__form__input {
+  margin-bottom: 2rem;
+}
+.create-post__form__textarea {
+  margin-bottom: 3rem;
+  resize: none;
+  height: 25rem;
+}
+.create-post__form__button:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .footer {
@@ -111,7 +143,6 @@ body {
   display: flex;
   flex-direction: column;
   padding: 3rem 4rem;
-  width: 22%;
   box-shadow: 0 7px 8px rgba(32, 32, 32, 0.4);
   color: #202020;
 }
@@ -128,7 +159,7 @@ body {
 }
 .form__message--valid {
   display: block;
-  color: #00e20b;
+  color: #00c50a;
 }
 .form__message--invalid {
   display: block;
@@ -147,7 +178,7 @@ body {
   transition: all 0.3s;
 }
 .form__input--valid {
-  border: 1px solid #00e20b;
+  border: 1px solid #00c50a;
 }
 .form__input--invalid {
   border: 1px solid #bd0808;
@@ -173,6 +204,7 @@ body {
   margin-left: 2rem;
   color: #f2f2f2;
   font-size: 1.8rem;
+  text-shadow: 0 0 1rem #202020;
   transition: all 0.3s;
 }
 .form__input:placeholder-shown + .form__label {
@@ -188,6 +220,69 @@ body {
 }
 .form__link:hover {
   color: rgba(242, 242, 242, 0.8);
+}
+
+.home-post {
+  padding: 3rem 3.5rem;
+  width: 60%;
+  box-shadow: 0 1rem 1rem rgba(32, 32, 32, 0.2);
+  background-color: #d3d7ec;
+}
+.home-post:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.home-post__title {
+  margin-bottom: 1rem;
+  color: #2745f2;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.home-post__preview-body {
+  margin-bottom: 2rem;
+  color: #202020;
+  font-size: 1.8rem;
+}
+.home-post__read-more {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #415cf2;
+  font-size: 1.6rem;
+  transition: all 0.2s;
+}
+.home-post__read-more:hover {
+  color: #2745f2;
+}
+.home-post__likes {
+  color: #2745f2;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+.home-post__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.home-post__details__username {
+  color: #2c2c2c;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.home-post__details__time {
+  font-size: 1.6rem;
+}
+.home-post__feedback {
+  display: flex;
+  justify-content: center;
+}
+.home-post__feedback--like {
+  margin-right: 5rem;
+  color: #00c50a;
+  cursor: pointer;
+}
+.home-post__feedback--dislike {
+  color: #bd0808;
+  cursor: pointer;
 }
 
 .navbar {
@@ -247,7 +342,7 @@ body {
   align-items: center;
 }
 .home-page__welcome__image {
-  width: 25%;
+  width: 15%;
   margin-bottom: 1.5rem;
 }
 .home-page__welcome__heading {
@@ -255,8 +350,17 @@ body {
   font-size: 2rem;
   font-weight: 500;
 }
+.home-page__welcome__heading-span {
+  color: #2745f2;
+}
 .home-page__create-post {
   margin: 3rem 0;
+}
+.home-page__posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .landing-page {
@@ -268,7 +372,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 8rem 0 20rem;
+  margin: 3rem 0 20rem;
 }
 .landing-page__header__image {
   width: 40%;
@@ -328,7 +432,7 @@ body {
 }
 .landing-page__features__card__icon {
   font-size: 4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: #f2f2f2;
 }
 .landing-page__features__card__heading {
@@ -434,7 +538,13 @@ body {
   height: 100vh;
 }
 .login-page__form {
+  width: 22%;
   background-color: #6b7ff2;
+}
+@media only screen and (max-width: 37.5em) {
+  .login-page__form {
+    width: 90%;
+  }
 }
 .login-page__form__heading {
   margin-bottom: 1rem;
@@ -462,7 +572,13 @@ body {
   height: 100vh;
 }
 .register-page__form {
+  width: 22%;
   background-color: #6b7ff2;
+}
+@media only screen and (max-width: 37.5em) {
+  .register-page__form {
+    width: 90%;
+  }
 }
 .register-page__form__heading {
   margin-bottom: 1rem;

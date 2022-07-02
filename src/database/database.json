@@ -1,9 +1,35 @@
 {
-	"users": [
-		{
-			"id": "5767e09b-6938-41ec-950b-32aa589ad372",
-			"username": "Telrodan",
-			"password": "test"
-		}
-	]
+  "users": [
+    {
+      "id": "5767e09b-6938-41ec-950b-32aa589ad372",
+      "username": "Telrodan",
+      "password": "test"
+    }
+  ],
+  "posts": [
+    {
+      "id": "79acecbb-a995-4b97-8203-59d6b64fe2b3",
+      "title": "Elso post",
+      "body": "test szoveg",
+      "user": "Telrodan",
+      "likes": 0,
+      "date_posted": "2:46:50 PM, Fri Jul 01 2022"
+    },
+    {
+      "id": "b83af5ad-df21-47ea-b73b-b47cf83dbafe",
+      "title": "asd",
+      "body": "asd",
+      "user": "Telrodan",
+      "likes": 1,
+      "date_posted": "10:45:01 AM, Sat Jul 02 2022"
+    },
+    {
+      "id": "810dacdb-7bf5-4e88-b080-fb332a0301a2",
+      "title": "Bence",
+      "body": "ASKJDKLASJDLKSAJDLKASJDKLASJDKLjasDas",
+      "user": "Telrodan",
+      "likes": 0,
+      "date_posted": "11:35:40 AM, Sat Jul 02 2022"
+    }
+  ]
 }

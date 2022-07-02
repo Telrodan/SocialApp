@@ -9,7 +9,7 @@
 		align-items: center;
 
 		&__image {
-			width: 25%;
+			width: 15%;
 			margin-bottom: 1.5rem;
 		}
 
@@ -17,10 +17,21 @@
 			color: $color-grey;
 			font-size: 2rem;
 			font-weight: 500;
+
+			&-span {
+				color: $color-blue-1;
+			}
 		}
 	}
 
 	&__create-post {
 		margin: 3rem 0;
+	}
+
+	&__posts {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
 	}
 }

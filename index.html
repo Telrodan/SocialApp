@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Import Fontawesome -->
   <script src="https://kit.fontawesome.com/a3027ea2cf.js" crossorigin="anonymous" defer></script>
+  <!-- Import Landing JS -->
+  <script type="module" src="/src/js/pages/landing.js" defer></script>
   <!-- Link CSS -->
   <link rel="stylesheet" href="src/css/style.css">
   <title>SocialApp | Landing Page</title>
@@ -14,15 +16,8 @@
 
 <body>
   <div class="app">
-    <div class="navbar">
-      <div class="navbar__logo-box">
-        <i class="fa-brands fa-bandcamp navbar__logo"></i>
-        <p class="navbar__name">Social<span class="navbar__name-span">App</span></p>
-      </div>
-      <nav class="navbar__navigation">
-        <a href="src/pages/login.html" class="navbar__link button button--white">Login</a>
-        <a href="src/pages/register.html" class="navbar__link button button--white">Register</a>
-      </nav>
+    <div class="navbar" id="navbar">
+
     </div>
     <div class="app__content">
       <div class="landing-page">
@@ -31,7 +26,7 @@
             class="landing-page__header__image">
           <h1 class="landing-page__header__heading">Manage <span class="landing-page__header__heading-span">Your
             </span>Social Life In One Place.</h1>
-          <a href="src/pages/login.html" class="landing-page__header__link button button--blue">Get Started</a>
+          <a href="src/pages/register.html" class="landing-page__header__link button button--blue">Get Started</a>
         </div>
         <section class="landing-page__features">
           <div class="landing-page__features__card">

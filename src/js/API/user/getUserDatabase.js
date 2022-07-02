@@ -1,8 +1,8 @@
 "use strict";
 
 const getUserDatabase = async () => {
-	const uri = "http://localhost:3004/users";
-	const res = await fetch(uri);
+	const users = "http://localhost:3004/users";
+	const res = await fetch(users);
 	const userDatabase = await res.json();
 	return userDatabase;
 };

@@ -6,6 +6,7 @@ import navigateUser from "../utils/user/navigateUser.js";
 import setFormMessage from "../utils/form/setFormMessage.js";
 import handleFormInput from "../utils/form/handleFormInput.js";
 import validateUserInput from "../validators/form/validateUserInput.js";
+import validateUser from "../utils/user/validateUser.js";
 
 const loginForm = document.getElementById("loginForm");
 const usernameInputEl = document.getElementById("username");
@@ -13,7 +14,7 @@ const passwordInputEl = document.getElementById("password");
 
 const validLogin = (user) => {
 	verifyUser(user);
-	navigateUser("/src/pages/home.html", 1500);
+	navigateUser("/src/pages/home/home.html", 1500);
 	setFormMessage("valid", "Succesfull login.");
 	handleFormInput("valid", usernameInputEl);
 	handleFormInput("valid", passwordInputEl);
@@ -58,3 +59,4 @@ const registerEventListeners = () => {
 };
 
 registerEventListeners();
+validateUser();

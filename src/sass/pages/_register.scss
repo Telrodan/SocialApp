@@ -8,7 +8,12 @@
 	height: 100vh;
 
 	&__form {
+		width: 22%;
 		background-color: $color-blue-3;
+
+		@include respond(phone) {
+			width: 90%;
+		}
 
 		&__heading {
 			margin-bottom: 1rem;

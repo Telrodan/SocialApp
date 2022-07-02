@@ -5,6 +5,7 @@ import setFormMessage from "../utils/form/setFormMessage.js";
 import validateRegisterForm from "../validators/form/validateRegisterForm.js";
 import navigateUser from "../utils/user/navigateUser.js";
 import validateUserInput from "../validators/form/validateUserInput.js";
+import validateUser from "../utils/user/validateUser.js";
 
 const registerForm = document.getElementById("registerForm");
 const formInputs = document.querySelectorAll("input");
@@ -48,3 +49,4 @@ const registerEventListeners = () => {
 };
 
 registerEventListeners();
+validateUser();
