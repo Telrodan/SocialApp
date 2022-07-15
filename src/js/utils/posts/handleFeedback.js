@@ -5,7 +5,8 @@ import saveHomePostById from '../../API/posts/saveHomePostById.js';
 
 const handleFeedback = async e => {
   const feedbackValue = e.target.getAttribute('value');
-  const likesEl = e.target.parentElement.parentElement.childNodes[7];
+  const likesEl = e.target.parentElement.parentElement.childNodes[11];
+  console.log(likesEl);
 
   if (feedbackValue === 'like' || feedbackValue === 'dislike') {
     const id = e.target.parentElement.parentElement.id;

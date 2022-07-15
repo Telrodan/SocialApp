@@ -7,24 +7,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Import Fontawesome -->
   <script src="https://kit.fontawesome.com/a3027ea2cf.js" crossorigin="anonymous" defer></script>
-  <!-- Import Home JS -->
+  <!-- Import News JS -->
   <script type="module" src="../js/pages/news.js" defer></script>
   <!-- Link CSS -->
   <link rel="stylesheet" href="/src/css/style.css">
-  <title>Home | SocialApp</title>
+  <title>Recent News | SocialApp</title>
 </head>
 <div class="app">
   <div class="navbar" id="navbar">
 
   </div>
-  <div class="news">
+  <div class="app__content">
     <nav class="sidebar" id="sidebar">
 
     </nav>
-    <div class="app__content">
+    <div class="news">
       <h1 class="news__heading">Recent News</h1>
+      <img src="../images/news-page/news-page-01.svg" alt="News Illustration" class="news__image">
+
       <div class="news__container" id="newsContainer">
 
+      </div>
+      <div class="news__navigation">
+        <a href="/src/pages/news.html?page=2" class="news__navigation__previous" id="previousPage">Previous</a>
+        <p class="news__navigation__page" id="currentPage"></p>
+        <a href="#" class="news__navigation__next" id="nextPage">Next</a>
       </div>
     </div>
   </div>

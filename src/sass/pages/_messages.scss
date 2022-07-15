@@ -1,0 +1,37 @@
+@use '../abstract' as *;
+
+.messages {
+  @include appContainer;
+
+  &__container {
+    @include appCard;
+  }
+
+  &__heading {
+    @include appHeading;
+  }
+
+  &__image {
+    width: 50%;
+    margin-bottom: 3rem;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+
+  &__navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  &__back-button {
+    width: 100%;
+  }
+}

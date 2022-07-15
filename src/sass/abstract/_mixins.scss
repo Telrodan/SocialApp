@@ -1,7 +1,29 @@
+@use './variables' as *;
+
 @mixin respond($breakpoint) {
-	@if $breakpoint == phone {
-		@media only screen and (max-width: 37.5em) {
-			@content;
-		}
-	}
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+}
+
+@mixin appContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+}
+
+@mixin appHeading {
+  margin-bottom: 3rem;
+  color: $color-blue-3;
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+@mixin appCard {
+  padding: 5rem;
+  box-shadow: 0 0 1rem rgba($color-black, 0.35);
+  background-color: $color-blue-4;
 }

@@ -1,32 +1,28 @@
-@use "../abstract" as *;
+@use '../abstract' as *;
 
 .create-post {
-	display: flex;
-	width: 100%;
+  @include appContainer;
 
-	&__heading {
-		margin-bottom: 3rem;
-		color: $color-blue-3;
-		font-size: 3.5rem;
-		font-weight: 500;
-	}
+  &__heading {
+    @include appHeading;
+  }
 
-	&__form {
-		width: 50%;
-		background-color: $color-blue-3;
+  &__form {
+    @include appCard;
+    width: 60%;
 
-		&__input {
-			margin-bottom: 2rem;
-		}
+    &__input {
+      margin-bottom: 2rem;
+    }
 
-		&__textarea {
-			margin-bottom: 3rem;
-			resize: none;
-			height: 25rem;
-		}
+    &__textarea {
+      margin-bottom: 3rem;
+      resize: none;
+      height: 25rem;
+    }
 
-		&__button:not(:last-child) {
-			margin-bottom: 1rem;
-		}
-	}
+    &__button:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
 }

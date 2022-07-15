@@ -1,7 +1,12 @@
 @use '../abstract' as *;
 
 .news {
-  display: flex;
+  @include appContainer;
+
+  &__image {
+    width: 15%;
+    margin-bottom: 5rem;
+  }
 
   &__heading {
     margin-bottom: 3rem;
@@ -16,25 +21,48 @@
     align-items: center;
   }
 
+  &__navigation {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    padding-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    border-bottom: 1px solid rgba($color-grey, 0.2);
+
+    &__previous,
+    &__next {
+      color: $color-blue-1;
+      transition: all 0.2s;
+
+      &:hover {
+        color: $color-blue-3;
+      }
+    }
+
+    &__current {
+      color: $color-black;
+    }
+  }
+
   &__card {
+    @include appCard;
     display: flex;
     flex-direction: column;
-    padding: 5rem 6rem;
     margin-bottom: 5rem;
     width: 60%;
-    background-color: $color-blue-4;
-    box-shadow: 0 1rem 1rem rgba($color-black, 0.2);
 
     &__title {
-      margin-bottom: 2rem;
       color: $color-black;
-      font-size: 2.4rem;
+      font-size: 2.2rem;
     }
 
     &__image {
       width: 50%;
       align-self: center;
-      margin-bottom: 2rem;
+      margin: 3rem 0;
+      border-radius: 5px;
+      box-shadow: 0 0 1rem rgba($color-black, 0.35);
     }
 
     &__description {
@@ -53,4 +81,8 @@
       }
     }
   }
+}
+
+.hidden {
+  visibility: hidden;
 }
